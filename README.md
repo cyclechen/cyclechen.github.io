@@ -1,11 +1,11 @@
-dbyll
+CycleChen
 =====
 
 Open source stylish, minimalistic theme for jekyll.  
-Demo: http://dbtek.github.io/dbyll/
+Demo: http://dbtek.github.io/CycleChen/
 
 ## New
-- Dbyll for Ghost is now available. Get it [here](https://github.com/dbtek/dbyll-ghost) now.
+- CycleChen for Ghost is now available. Get it [here](https://github.com/dbtek/CycleChen-ghost) now.
 - :new: Check out [Paper](https://github.com/dbtek/paper), new Material Design Jekyll theme.
 
 ### Features
@@ -21,7 +21,7 @@ Demo: http://dbtek.github.io/dbyll/
 
 
 ### Download
-* [Download dbyll](https://github.com/dbtek/dbyll/archive/master.zip)
+* [Download CycleChen](https://github.com/dbtek/CycleChen/archive/master.zip)
 
 ### Install
 - You need to have [ruby](https://www.ruby-lang.org/en/documentation/installation/) installed in your system.
@@ -30,7 +30,7 @@ Demo: http://dbtek.github.io/dbyll/
 - Then - ```bundle exec jekyll serve```
 
 ### Screenshots
-![dbyll-screenshot](assets/media/dbyll-ss.png)
+![CycleChen-screenshot](assets/media/CycleChen-ss.png)
 
 ### License
 - [MIT](http://opensource.org/licenses/MIT)
