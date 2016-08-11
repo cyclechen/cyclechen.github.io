@@ -1,1 +1,4 @@
-*Thumbs.db
+_drafts/
+_site/
+.DS_Store
+*.swp
