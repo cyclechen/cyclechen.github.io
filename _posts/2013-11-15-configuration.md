@@ -9,7 +9,7 @@ fullview: true
 In your config file change these settings
 
 {% highlight yaml %}
-title: CycleChen
+title: dbyll
 author:  
   name: yourname  
   email: youremail  
