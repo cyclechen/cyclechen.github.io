@@ -18,6 +18,7 @@ defaults:
 
 description: Stylish Jekyll Theme
 author:
+  me: /images/me.jpg
   name: CycleChen
   email: CycleChen@outlook.com
   github: cyclechen
