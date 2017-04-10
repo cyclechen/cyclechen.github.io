@@ -1,2 +1,9 @@
-# hello this is my github page(http://cyclechen.github.io/)
-# theme origined from Jacman(https://github.com/wuchong/jacman)
+ Hello this is my <a href="http://cyclechen.github.io/">github page</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ theme origined from <a href="https://github.com/wuchong/jacman">Jacman</a>
