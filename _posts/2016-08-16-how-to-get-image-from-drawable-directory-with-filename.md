@@ -17,7 +17,7 @@ comments: true
     public static void loadLocalImage(String imageName, ImageView imageView, Context context) {
         //得到application对象
         ApplicationInfo appInfo = context.getApplicationInfo();
-//得到该图片的id(name 是该图片的名字，"drawable"是该图片存放的目录，appInfo.packageName是包名)
+		//得到该图片的id(name 是该图片的名字，"drawable"是该图片存放的目录，appInfo.packageName是包名)
         int resID = context.getResources().getIdentifier(imageName, "drawable", appInfo.packageName);
         imageView.setBackgroundResource((resID));
     }
