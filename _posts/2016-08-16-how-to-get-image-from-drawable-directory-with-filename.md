@@ -8,8 +8,12 @@ comments: true
 ---
 
 
+从assets文件夹中加载图片，代码如下：
+
+````java
+
     /**
-     * 从assets文件夹中异步加载图片
+     * 
      *
      * @param imageName 图片名称，不带后缀的，例如：test
      * @param imageView
@@ -22,3 +26,4 @@ comments: true
         imageView.setBackgroundResource((resID));
     }
 
+````
