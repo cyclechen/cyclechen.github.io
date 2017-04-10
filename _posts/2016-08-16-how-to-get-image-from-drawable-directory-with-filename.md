@@ -7,7 +7,6 @@ fullview: true
 comments: true
 ---
 
-{% highlight yaml %}
 
     /**
      * 从assets文件夹中异步加载图片
@@ -22,4 +21,4 @@ comments: true
         int resID = context.getResources().getIdentifier(imageName, "drawable", appInfo.packageName);
         imageView.setBackgroundResource((resID));
     }
-{% endhighlight %}
+
