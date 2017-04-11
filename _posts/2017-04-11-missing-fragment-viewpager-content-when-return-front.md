@@ -1,13 +1,15 @@
 ---
 layout: post
-title: 使用jekyll过程中遇到的一些问题
+title: 切换到前台时FragmentViewPager内容缺失问题
 categories: [android]
 tags: [viewpager,FragmentViewPager]
 fullview: true
 comments: true
 ---
 
-APP从后台回到前台时首页推荐内容缺失问题：
+继续整理笔记。。。。。
+
+#切换到前台时FragmentViewPager内容缺失问题
 
 ````java
 recomandAdapter = new RecomandFragmentPagerAdapter(getActivity().getSupportFragmentManager(), fragmentList);
