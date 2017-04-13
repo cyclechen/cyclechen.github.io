@@ -6,13 +6,14 @@ tags: [tips]
 fullview: true
 comments: true
 ---
- 
- 在使用jekyll过程中遇到的一些问题及解决方法
- 
- # #1.依赖的版本号不对：
- ````
+
+在使用jekyll过程中遇到的一些问题及解决方法;
+
+#1.依赖的版本号不对：
+
+````sh
  You have already activated json 2.0.3, but your Gemfile requires json 1.8.6. Prepending `bundle exec` to your command may solve this. (Gem::LoadError)
- ````
+````
  
  这个问题是在下载了别人的jekyll后，运行```` jekyll s ```` 后出现的。
  大概就是说，你已经在用2.0.3了，但是你的gemfile里却要1.8.6。所以在你的命令前增加```` bundle exec ````,
