@@ -33,8 +33,8 @@ defaults:
 paginate: 20
 
 #### Site
-title : Jekyll Jacman
-tagline: A fresh looking and responsive theme for Jekyll
+title : Welcome
+tagline: Life is all of tortures;
 assets: /assets
 baseurl: 
 
@@ -139,7 +139,7 @@ baidu_tongji:
   sitecode:  ## e.g. e6d1f421bbc9962127a50488f9ed37d1 your baidu tongji site code
 cnzz_tongji:
   enable: false
-  siteid:    ## e.g. 1253575964 your cnzz tongji site id
+  siteid: 1261758643    ## e.g. 1253575964 your cnzz tongji site id
 
 #### Miscellaneous
 fancybox: true        ## if you use gallery post or want use fancybox please set the value to true.
@@ -156,7 +156,7 @@ google_cse:
 ## title: search
 ## ---
 baidu_search:     ## http://zn.baidu.com/
-  enable: false
+  enable: true
   id:   ## e.g. "783281470518440642"  for your baidu search id
   site: http://zhannei.baidu.com/cse/search  ## your can change to your site instead of the default site
 tinysou_search:     ## http://tinysou.com/
