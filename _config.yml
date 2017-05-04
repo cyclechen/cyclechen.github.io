@@ -119,7 +119,7 @@ links:
 
 #### Comment
 duoshuo_shortname:   ## e.g. wuchong   your duoshuo short name.
-disqus_shortname:  CycleChen   ## e.g. wuchong   your disqus short name.
+disqus_shortname:  cyclechen   ## e.g. wuchong   your disqus short name.
 
 #### Share button
 jiathis:
@@ -138,7 +138,7 @@ baidu_tongji:
   enable: false
   sitecode:  ## e.g. e6d1f421bbc9962127a50488f9ed37d1 your baidu tongji site code
 cnzz_tongji:
-  enable: false
+  enable: true
   siteid: 1261758643    ## e.g. 1253575964 your cnzz tongji site id
 
 #### Miscellaneous
@@ -157,7 +157,7 @@ google_cse:
 ## ---
 baidu_search:     ## http://zn.baidu.com/
   enable: true
-  id:   ## e.g. "783281470518440642"  for your baidu search id
+  id: DWMJXzNRvN   ## e.g. "783281470518440642"  for your baidu search id
   site: http://zhannei.baidu.com/cse/search  ## your can change to your site instead of the default site
 tinysou_search:     ## http://tinysou.com/
   enable: false
