@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 关于weight属性笔记
+title: android dialog
 categories: [tips]
 tags: [tips]
 fullview: true
@@ -9,7 +9,8 @@ comments: true
 
 
 
-````xml
+````html
+
 
        <style name="dialog">
         <item name="android:windowFullscreen">true</item>
