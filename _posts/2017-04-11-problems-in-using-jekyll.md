@@ -11,16 +11,16 @@ comments: true
 
 #1.依赖的版本号不对：
 
-````sh
+```java
  You have already activated json 2.0.3, but your Gemfile requires json 1.8.6. Prepending `bundle exec` to your command may solve this. (Gem::LoadError)
-````
+```
  
- 这个问题是在下载了别人的jekyll后，运行```` jekyll s ```` 后出现的。
- 大概就是说，你已经在用2.0.3了，但是你的gemfile里却要1.8.6。所以在你的命令前增加```` bundle exec ````,
- 即```` bundle exec jekyll s````可以就可以解决这个问题了。
+ 这个问题是在下载了别人的jekyll后，运行``` jekyll s ``` 后出现的。
+ 大概就是说，你已经在用2.0.3了，但是你的gemfile里却要1.8.6。所以在你的命令前增加``` bundle exec ```,
+ 即``` bundle exec jekyll s```可以就可以解决这个问题了。
  试了一下，的确是可以将jekyll运行起来了，但是根目录下却多了个GemFile.lock。打开后看到：
 
- ````sh
+ ```java
   GEM  
    remote: https://rubygems.org/
    specs:
@@ -48,7 +48,7 @@ comments: true
      listen (3.0.6)
        rb-fsevent (>= 0.9.3)
        rb-inotify (>= 0.9.7)
- ````
- 留意后面的```` json (1.8.6) ````,到这里就开始猜测是否就是这个版本号问题？将它改成```` json (2.0.3) ```` 
+ ```
+ 留意后面的``` json (1.8.6) ```,到这里就开始猜测是否就是这个版本号问题？将它改成``` json (2.0.3) ``` 
  再重新运行jekyll，行了！
  
