@@ -15,12 +15,12 @@ comments: true
 环境：centos5.9-64, tomcat7.0
 
 打开tomcat/bin/catalina.sh，找到
-``` 
+```java
 CATALINA_OUT="$CATALINA_BASE"/logs/catalina.out
 ```
 
 修改为：
-```
+```java
 CATALINA_OUT="$CATALINA_BASE"/logs/catalina"-`date "+%Y-%m-%d"`".out
 ```
 
