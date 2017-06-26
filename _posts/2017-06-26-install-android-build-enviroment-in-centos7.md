@@ -18,7 +18,7 @@ comments: true
 
 Step 1. 安装android SDK
 1）android sdk 工具包的一些命令行工具是基于32位系统的，在64为平台运行32程序必须安装 一些依赖库,方法如下：
-````
+```` java
 	yum install glibc*.i686
     yum install zlib*.i686
     yum install libstdc++.so.6
@@ -31,15 +31,15 @@ Step 1. 安装android SDK
     export ANDROID_HOME
 ````
 4）使环境变量生效:
-```` sh
+```` java
 	source /etc/profile
 ````
 5）验证是否安装正常
-```` sh
+```` java
 	android list sdk --all 
 ````
 正常输出：
-```` sh
+```` java
    1- Android SDK Tools, revision 24.4.1
    2- Android SDK Platform-tools, revision 23.0.1
    3- Android SDK Platform-tools, revision 23.1 rc1
@@ -56,23 +56,23 @@ Step 1. 安装android SDK
 
 Step 2.安装Gradle工具
 1）解压gradle-2.14.1-all.zip，并创建一个软连接gradle：
-```` sh
+```` java
 	ln -s gradle-2.14.1 gradle
 ````
 
 2）将gradle目录添加到环境变量中，确定终端能调用gradle：
-```` sh
+```` java
 	GRADLE_HOME=$HOME/gradle
     export PATH=$PATH:$GRADLE_HOME/bin
 ````
 
 3）使环境变量生效：
-```` sh
+```` java
 	source /etc/profile
 ````
 
 4）验证是否安装正常：
-```` sh
+```` java
 	gradle -v 
 ````
 能看到gradle版本信息即为安装正常；
@@ -80,7 +80,7 @@ Step 2.安装Gradle工具
 Step3.验证android编译环境是否正常安装
 1）解压gradleDemo.zip，进入gradleDemo
 2）运行：
-```` sh
+```` java
 gradle build 
 ````
 3）进入 ```` app/build/outputs/apk ````，检查是否有apk文件，有则下载安装到手机，如果能正常安装，则说明android编译环境正常。
