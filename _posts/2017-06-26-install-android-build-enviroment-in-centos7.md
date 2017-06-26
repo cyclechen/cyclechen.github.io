@@ -8,24 +8,24 @@
 
 ##Step 1. 安装android SDK
 1）android sdk 工具包的一些命令行工具是基于32位系统的，在64为平台运行32程序必须安装 一些依赖库,方法如下：
-````sh
+````
 	yum install glibc*.i686
     yum install zlib*.i686
     yum install libstdc++.so.6
 ````
 2）解压android-sdk-linux.tar；
 3）将android-sdk-linux目录添加到环境变量中，确保终端能调用android SDK的一些命令，在/etc/profile中末尾增加下面内容：
-```` shell
+```` 
 	ANDROID_HOME=$HOME/android-sdk-linux  --当前android-sdk-linux目录
     export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
     export ANDROID_HOME
 ````
 4）使环境变量生效:
-```` shell
+```` 
 	source /etc/profile
 ````
 5）验证是否安装正常
-```` shell
+```` 
 	android list sdk --all 
 ````
 正常输出：
@@ -46,23 +46,23 @@
 
 ##Step 2.安装Gradle工具
 1）解压gradle-2.14.1-all.zip，并创建一个软连接gradle：
-```` shell
+```` 
 	ln -s gradle-2.14.1 gradle
 ````
 
 2）将gradle目录添加到环境变量中，确定终端能调用gradle：
-````shell
+````
 	GRADLE_HOME=$HOME/gradle
     export PATH=$PATH:$GRADLE_HOME/bin
 ````
 
 3）使环境变量生效：
-````shell
+````
 	source /etc/profile
 ````
 
 4）验证是否安装正常：
-```` shell
+```` 
 	gradle -v 
 ````
 能看到gradle版本信息即为安装正常；
@@ -70,7 +70,7 @@
 ##Step3.验证android编译环境是否正常安装
 1）解压gradleDemo.zip，进入gradleDemo
 2）运行：
-```` shell
+````
 gradle build 
 ````
-3）进入 app/build/outputs/apk，检查是否有apk文件，有则下载安装到手机，如果能正常安装，则说明android编译环境正常。
+3）进入 ```` app/build/outputs/apk ````，检查是否有apk文件，有则下载安装到手机，如果能正常安装，则说明android编译环境正常。
