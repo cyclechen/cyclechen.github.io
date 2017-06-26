@@ -19,24 +19,24 @@ comments: true
 Step 1. 安装android SDK
 1）android sdk 工具包的一些命令行工具是基于32位系统的，在64为平台运行32程序必须安装 一些依赖库,方法如下：
 ```` java
-	yum install glibc*.i686
-    yum install zlib*.i686
-    yum install libstdc++.so.6
+yum install glibc*.i686
+yum install zlib*.i686
+yum install libstdc++.so.6
 ````
 2）解压android-sdk-linux.tar；
 3）将android-sdk-linux目录添加到环境变量中，确保终端能调用android SDK的一些命令，在/etc/profile中末尾增加下面内容：
 ```` java
-	ANDROID_HOME=$HOME/android-sdk-linux  --当前android-sdk-linux目录
-    export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
-    export ANDROID_HOME
+ANDROID_HOME=$HOME/android-sdk-linux  --当前android-sdk-linux目录
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+export ANDROID_HOME
 ````
 4）使环境变量生效:
 ```` java
-	source /etc/profile
+source /etc/profile
 ````
 5）验证是否安装正常
 ```` java
-	android list sdk --all 
+android list sdk --all 
 ````
 正常输出：
 ```` java
@@ -57,23 +57,23 @@ Step 1. 安装android SDK
 Step 2.安装Gradle工具
 1）解压gradle-2.14.1-all.zip，并创建一个软连接gradle：
 ```` java
-	ln -s gradle-2.14.1 gradle
+ln -s gradle-2.14.1 gradle
 ````
 
 2）将gradle目录添加到环境变量中，确定终端能调用gradle：
 ```` java
-	GRADLE_HOME=$HOME/gradle
-    export PATH=$PATH:$GRADLE_HOME/bin
+GRADLE_HOME=$HOME/gradle
+export PATH=$PATH:$GRADLE_HOME/bin
 ````
 
 3）使环境变量生效：
 ```` java
-	source /etc/profile
+source /etc/profile
 ````
 
 4）验证是否安装正常：
 ```` java
-	gradle -v 
+gradle -v 
 ````
 能看到gradle版本信息即为安装正常；
 
