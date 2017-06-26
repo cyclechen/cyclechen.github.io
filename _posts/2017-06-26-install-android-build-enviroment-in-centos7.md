@@ -1,12 +1,3 @@
----
-layout: post
-title: centos7中安装android编译环境
-categories: [android,centos7]
-tags: [android编译环境]
-fullview: true
-comments: true
----
-
 #andrdoid编译环境安装说明
 
 本文档用于在centos7.0中部署andrdoid编译环境，附件包括
@@ -17,21 +8,28 @@ comments: true
 
 ##Step 1. 安装android SDK
 1）android sdk 工具包的一些命令行工具是基于32位系统的，在64为平台运行32程序必须安装 一些依赖库,方法如下：
-````yum install glibc*.i686
+````sh
+	yum install glibc*.i686
     yum install zlib*.i686
     yum install libstdc++.so.6
 ````
 2）解压android-sdk-linux.tar；
 3）将android-sdk-linux目录添加到环境变量中，确保终端能调用android SDK的一些命令，在/etc/profile中末尾增加下面内容：
-```` ANDROID_HOME=$HOME/android-sdk-linux  --当前android-sdk-linux目录
-     export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
-     export ANDROID_HOME
+```` shell
+	ANDROID_HOME=$HOME/android-sdk-linux  --当前android-sdk-linux目录
+    export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+    export ANDROID_HOME
 ````
 4）使环境变量生效:
-```` source /etc/profile ````
+```` shell
+	source /etc/profile
+````
 5）验证是否安装正常
-```` android list sdk --all ````
+```` shell
+	android list sdk --all 
+````
 正常输出：
+```` sh
    1- Android SDK Tools, revision 24.4.1
    2- Android SDK Platform-tools, revision 23.0.1
    3- Android SDK Platform-tools, revision 23.1 rc1
@@ -44,28 +42,35 @@ comments: true
   10- Android SDK Build-tools, revision 21.1 (Obsolete)
   11- Android SDK Build-tools, revision 21.0.2 (Obsolete)
   12- Android SDK Build-tools, revision 21.0.1 (Obsolete)
-** 其实也可以通过命令行来下载安装相应版本的sdk，但是由于网络不稳定，所以未采用该方法 **
+````
 
 ##Step 2.安装Gradle工具
 1）解压gradle-2.14.1-all.zip，并创建一个软连接gradle：
-```` ln -s gradle-2.14.1 gradle ````
+```` shell
+	ln -s gradle-2.14.1 gradle
+````
 
 2）将gradle目录添加到环境变量中，确定终端能调用gradle：
-````GRADLE_HOME=$HOME/gradle
+````shell
+	GRADLE_HOME=$HOME/gradle
     export PATH=$PATH:$GRADLE_HOME/bin
 ````
 
 3）使环境变量生效：
-````source /etc/profile
-
+````shell
+	source /etc/profile
 ````
 
 4）验证是否安装正常：
-```` gradle -v ````
+```` shell
+	gradle -v 
+````
 能看到gradle版本信息即为安装正常；
 
 ##Step3.验证android编译环境是否正常安装
 1）解压gradleDemo.zip，进入gradleDemo
 2）运行：
-```` gradle build ````
+```` shell
+gradle build 
+````
 3）进入 app/build/outputs/apk，检查是否有apk文件，有则下载安装到手机，如果能正常安装，则说明android编译环境正常。
