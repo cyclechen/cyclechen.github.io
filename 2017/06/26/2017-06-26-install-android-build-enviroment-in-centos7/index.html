@@ -107,7 +107,7 @@
 <meta property="og:url" content="http://cyclechen.github.io/2017/06/26/2017-06-26-install-android-build-enviroment-in-centos7/index.html">
 <meta property="og:site_name" content="Welcome">
 <meta property="og:description" content="继续纪录~~~~本文描述了大centos7.0中如何部署andrdoid编译环境，附件下载连接：链接：链接：http://pan.baidu.com/s/1nv6wV3N 密码：m0lm附件包括：  android-sdk-linux.tar： androidSDK压缩包，包括了extra，platform（21，22），build tools(21.0.0，21.1.1，22.0.0，22.0.">
-<meta property="og:updated_time" content="2017-06-27T12:04:06.916Z">
+<meta property="og:updated_time" content="2017-07-03T11:54:14.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos7中安装andrdoid编译环境">
 <meta name="twitter:description" content="继续纪录~~~~本文描述了大centos7.0中如何部署andrdoid编译环境，附件下载连接：链接：链接：http://pan.baidu.com/s/1nv6wV3N 密码：m0lm附件包括：  android-sdk-linux.tar： androidSDK压缩包，包括了extra，platform（21，22），build tools(21.0.0，21.1.1，22.0.0，22.0.">
@@ -367,7 +367,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  582 字
+                  1,438 字
                 </span>
               
 
@@ -383,7 +383,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  3 min
+                  7 min
                 </span>
               
             </div>
@@ -408,17 +408,45 @@
 <li>gradleDemo.zip：用于测试android编译环境是否正常安装; </li>
 <li>HOW-TO-USE.md：安装说明文档。</li>
 </ul>
-<p>Step 1. 安装android SDK<br>1）android sdk 工具包的一些命令行工具是基于32位系统的，在64为平台运行32程序必须安装 一些依赖库,方法如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yum install glibc*.i686</div><div class="line">yum install zlib*.i686</div><div class="line">yum install libstdc++.so.6</div></pre></td></tr></table></figure></p>
-<p>2）解压android-sdk-linux.tar；<br>3）将android-sdk-linux目录添加到环境变量中，确保终端能调用android SDK的一些命令，在/etc/profile中末尾增加下面内容：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ANDROID_HOME=$HOME/android-sdk-linux  --当前android-sdk-linux目录</div><div class="line">export PATH=<span class="string">"$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"</span></div><div class="line">export ANDROID_HOME</div></pre></td></tr></table></figure></p>
-<p>4）使环境变量生效:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/profile</div></pre></td></tr></table></figure></p>
-<p>5）验证是否安装正常<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android list sdk --all</div></pre></td></tr></table></figure></p>
-<p>正常输出：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"> <span class="number">1</span>- Android SDK Tools, revision <span class="number">24.4</span>.1</div><div class="line"> <span class="number">2</span>- Android SDK Platform-tools, revision <span class="number">23.0</span>.1</div><div class="line"> <span class="number">3</span>- Android SDK Platform-tools, revision <span class="number">23.1</span> rc1</div><div class="line"> <span class="number">4</span>- Android SDK Build-tools, revision <span class="number">23.0</span>.1</div><div class="line"> <span class="number">5</span>- Android SDK Build-tools, revision <span class="number">23</span> (Obsolete)</div><div class="line"> <span class="number">6</span>- Android SDK Build-tools, revision <span class="number">22.0</span>.1</div><div class="line"> <span class="number">7</span>- Android SDK Build-tools, revision <span class="number">22</span> (Obsolete)</div><div class="line"> <span class="number">8</span>- Android SDK Build-tools, revision <span class="number">21.1</span>.2</div><div class="line"> <span class="number">9</span>- Android SDK Build-tools, revision <span class="number">21.1</span>.1 (Obsolete)</div><div class="line"><span class="number">10</span>- Android SDK Build-tools, revision <span class="number">21.1</span> (Obsolete)</div><div class="line"><span class="number">11</span>- Android SDK Build-tools, revision <span class="number">21.0</span>.2 (Obsolete)</div><div class="line"><span class="number">12</span>- Android SDK Build-tools, revision <span class="number">21.0</span>.1 (Obsolete)</div></pre></td></tr></table></figure></p>
-<p>Step 2.安装Gradle工具<br>1）解压gradle-2.14.1-all.zip，并创建一个软连接gradle：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -s gradle-<span class="number">2.14</span>.1 gradle</div></pre></td></tr></table></figure></p>
-<p>2）将gradle目录添加到环境变量中，确定终端能调用gradle：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">GRADLE_HOME=$HOME/gradle</div><div class="line">export PATH=$PATH:$GRADLE_HOME/bin</div></pre></td></tr></table></figure></p>
-<p>3）使环境变量生效：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/profile</div></pre></td></tr></table></figure></p>
-<p>4）验证是否安装正常：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gradle -v</div></pre></td></tr></table></figure></p>
+<h2 id="Step-1-安装android-SDK"><a href="#Step-1-安装android-SDK" class="headerlink" title="Step 1. 安装android SDK"></a>Step 1. 安装android SDK</h2><h3 id="命令行安装"><a href="#命令行安装" class="headerlink" title="命令行安装"></a>命令行安装</h3><p>1）android sdk 工具包的一些命令行工具是基于32位系统的，在64为平台运行32程序必须安装 一些依赖库,方法如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yum install glibc*.i686</div><div class="line">yum install zlib*.i686</div><div class="line">yum install libstdc++.so.6</div></pre></td></tr></table></figure></p>
+<p>2）解压android-sdk-linux.tar；<br>3）将android-sdk-linux目录添加到环境变量中，确保终端能调用android SDK的一些命令，在/etc/profile中末尾增加下面内容：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ANDROID_HOME=<span class="variable">$HOME</span>/android-sdk-linux  --当前android-sdk-linux目录</div><div class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:<span class="variable">$ANDROID_HOME</span>/tools:<span class="variable">$ANDROID_HOME</span>/platform-tools"</span></div><div class="line"><span class="built_in">export</span> ANDROID_HOME</div></pre></td></tr></table></figure></p>
+<p>4）使环境变量生效:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure></p>
+<p>5）准备安装sdk工具，首先执行下面命令：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android list sdk --all</div></pre></td></tr></table></figure></p>
+<p>正常输出的话会有下面的内容：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">Packages available <span class="keyword">for</span> installation or update: 182</div><div class="line"> 1- Android SDK Tools, revision 25.2.5</div><div class="line"> 2- Android SDK Platform-tools, revision 26</div><div class="line"> 3- Android SDK Build-tools, revision 26</div><div class="line"> 4- Android SDK Build-tools, revision 25.0.3</div><div class="line"> 5- Android SDK Build-tools, revision 25.0.2</div><div class="line"> 6- Android SDK Build-tools, revision 25.0.1</div><div class="line"> 7- Android SDK Build-tools, revision 25</div><div class="line"> 8- Android SDK Build-tools, revision 24.0.3</div><div class="line"> 9- Android SDK Build-tools, revision 24.0.2</div><div class="line">10- Android SDK Build-tools, revision 24.0.1</div><div class="line">11- Android SDK Build-tools, revision 24</div><div class="line">12- Android SDK Build-tools, revision 23.0.3</div><div class="line">13- Android SDK Build-tools, revision 23.0.2</div><div class="line">14- Android SDK Build-tools, revision 23.0.1</div><div class="line">15- Android SDK Build-tools, revision 23 (Obsolete)</div><div class="line">16- Android SDK Build-tools, revision 22.0.1</div><div class="line">17- Android SDK Build-tools, revision 22 (Obsolete)</div><div class="line">18- Android SDK Build-tools, revision 21.1.2</div><div class="line">19- Android SDK Build-tools, revision 21.1.1 (Obsolete)</div><div class="line">20- Android SDK Build-tools, revision 21.1 (Obsolete)</div><div class="line">21- Android SDK Build-tools, revision 21.0.2 (Obsolete)</div><div class="line">22- Android SDK Build-tools, revision 21.0.1 (Obsolete)</div><div class="line">23- Android SDK Build-tools, revision 21 (Obsolete)</div><div class="line">24- Android SDK Build-tools, revision 20</div><div class="line">25- Android SDK Build-tools, revision 19.1</div><div class="line">26- Android SDK Build-tools, revision 19.0.3 (Obsolete)</div><div class="line">27- Android SDK Build-tools, revision 19.0.2 (Obsolete)</div><div class="line">28- Android SDK Build-tools, revision 19.0.1 (Obsolete)</div><div class="line">29- Android SDK Build-tools, revision 19 (Obsolete)</div><div class="line">30- Android SDK Build-tools, revision 18.1.1 (Obsolete)</div><div class="line">31- Android SDK Build-tools, revision 18.1 (Obsolete)</div><div class="line">32- Android SDK Build-tools, revision 18.0.1 (Obsolete)</div><div class="line">33- Android SDK Build-tools, revision 17 (Obsolete)</div><div class="line">34- Documentation <span class="keyword">for</span> Android SDK, API 24, revision 1</div><div class="line">35- SDK Platform Android 8.0.0, API 26, revision 1</div><div class="line">36- SDK Platform Android 7.1.1, API 25, revision 3</div><div class="line">37- SDK Platform Android 7.0, API 24, revision 2</div><div class="line">38- SDK Platform Android 6.0, API 23, revision 3</div><div class="line">39- SDK Platform Android 5.1.1, API 22, revision 2</div><div class="line">40- SDK Platform Android 5.0.1, API 21, revision 2</div><div class="line">41- SDK Platform Android 4.4W.2, API 20, revision 2</div><div class="line">42- SDK Platform Android 4.4.2, API 19, revision 4</div><div class="line">43- SDK Platform Android 4.3.1, API 18, revision 3</div><div class="line">44- SDK Platform Android 4.2.2, API 17, revision 3</div><div class="line">45- SDK Platform Android 4.1.2, API 16, revision 5</div><div class="line">46- SDK Platform Android 4.0.3, API 15, revision 5</div><div class="line">47- SDK Platform Android 4.0, API 14, revision 4</div><div class="line">......</div></pre></td></tr></table></figure></p>
+<p><strong> 注意：实际输出的序号和版本未必和上面的一样！不同时间会有更新 </strong></p>
+<p>这里包括不同的Android API 版本和不同的构建工具，选择你想要安装项目的序号，首次安装建议安装build tools 17及以上，及 android 4.2.2以上的SDK，所以选择序号 “1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44”，执行命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android update sdk -u -a -t --proxy-host ubuntu.buct.edu.cn --proxy-port 80 “1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44”</div></pre></td></tr></table></figure>
+<p>安装的时候会提示接受<code>license</code>:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Do you accept the license <span class="string">'android-sdk-preview-license-52d11cd2'</span> [y/n]:</div></pre></td></tr></table></figure>
+<p>选择y同意之后才能继续安装，等待安装成功即可。</p>
+<p>可能会出现的错误：</p>
+<p>运行命令android list sdk 的时候，都会卡在</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Fetching https://dl.google.com/android/repository/addons_list-2.xml</div></pre></td></tr></table></figure>
+<p>此时可以通过两个代理参数：</p>
+<ul>
+<li><code>--proxy-host</code> 设置代理的host地址</li>
+<li><code>--proxy-port</code>设置代理的端口</li>
+</ul>
+<p>可以通过代理使用国内的Android镜像，国内的Android代理镜像服务器：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">http://mirrors.neusoft.edu.cn 端口：80</div><div class="line">http://ubuntu.buct.edu.cn/ 端口：80</div><div class="line">http://ubuntu.buct.cn/ 端口：80</div><div class="line">http://sdk.gdgshanghai.com 端口：8000</div><div class="line">IPv6: http://ubuntu.buct6.edu.cn/ 端口：80</div></pre></td></tr></table></figure>
+<p>即：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android list sdk --proxy-host mirrors.zzu.edu.cn --proxy-port 80 --all</div></pre></td></tr></table></figure>
+<p>然而，可能是我自己的网络原因，测试了下，这几个代码并不太稳定，在fetching的时候，偶尔会返回拒绝访问或者url重置。</p>
+<p>如果遇到了的话，建议还是通过离线下载sdk包来安装吧。</p>
+<h3 id="离线下载安装"><a href="#离线下载安装" class="headerlink" title="离线下载安装"></a>离线下载安装</h3><p>离线下载连接如下：</p>
+<ul>
+<li>build tools: <a href="https://androidsdkoffline.blogspot.com/p/android-sdk-build-tools.html" target="_blank" rel="external">https://androidsdkoffline.blogspot.com/p/android-sdk-build-tools.html</a></li>
+<li>platform tools: <a href="https://androidsdkoffline.blogspot.hk/p/android-sdk-platform-tools.html" target="_blank" rel="external">https://androidsdkoffline.blogspot.hk/p/android-sdk-platform-tools.html</a></li>
+<li>sdk tools: <a href="https://androidsdkoffline.blogspot.hk/p/android-sdk-tools.html" target="_blank" rel="external">https://androidsdkoffline.blogspot.hk/p/android-sdk-tools.html</a></li>
+</ul>
+<p>选择相应的版本，下载然后解压到sdk相应的目录中即可。</p>
+<h2 id="Step-2-安装Gradle工具"><a href="#Step-2-安装Gradle工具" class="headerlink" title="Step 2.安装Gradle工具"></a>Step 2.安装Gradle工具</h2><p>1）解压gradle-2.14.1-all.zip，并创建一个软连接gradle：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -s gradle-2.14.1 gradle</div></pre></td></tr></table></figure>
+<p>2）将gradle目录添加到环境变量中，确定终端能调用gradle：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">GRADLE_HOME=<span class="variable">$HOME</span>/gradle</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GRADLE_HOME</span>/bin</div></pre></td></tr></table></figure></p>
+<p>3）使环境变量生效：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure></p>
+<p>4）验证是否安装正常：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gradle -v</div></pre></td></tr></table></figure></p>
 <p>能看到gradle版本信息即为安装正常；</p>
-<p>Step3.验证android编译环境是否正常安装<br>1）解压gradleDemo.zip，进入gradleDemo<br>2）运行：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gradle build</div></pre></td></tr></table></figure></p>
+<h2 id="Step3-验证编译环境是否正常安装"><a href="#Step3-验证编译环境是否正常安装" class="headerlink" title="Step3.验证编译环境是否正常安装"></a>Step3.验证编译环境是否正常安装</h2><p>1）解压gradleDemo.zip，进入gradleDemo<br>2）运行：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gradle build</div></pre></td></tr></table></figure></p>
 <p>3）进入 <code>app/build/outputs/apk</code>，检查是否有apk文件，有则下载安装到手机，如果能正常安装，则说明android编译环境正常。</p>
 
       
@@ -526,8 +554,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -553,7 +590,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -564,7 +601,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -589,6 +626,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-1-安装android-SDK"><span class="nav-number">1.</span> <span class="nav-text">Step 1. 安装android SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行安装"><span class="nav-number">1.1.</span> <span class="nav-text">命令行安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#离线下载安装"><span class="nav-number">1.2.</span> <span class="nav-text">离线下载安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step-2-安装Gradle工具"><span class="nav-number">2.</span> <span class="nav-text">Step 2.安装Gradle工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step3-验证编译环境是否正常安装"><span class="nav-number">3.</span> <span class="nav-text">Step3.验证编译环境是否正常安装</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

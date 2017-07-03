@@ -100,17 +100,17 @@
 
 
 
-<meta name="description" content="最近在一个比较简洁的屏保，屏幕中间只显示当前日期和时间其中时间需要特别大的字号，但是用系统默认的会发现当设置了大字号后，字体变得非常粗，严重影响美观。 网上搜索了下，决定换一个字体,下面是部分代码： 123456Typeface typeface  = Typeface.createFromAsset(getAssets(),&quot;font/PingFang ExtraLight.ttf&quot;);mTex">
+<meta name="description" content="最近在一个比较简洁的屏保，屏幕中间只显示当前日期和时间其中时间需要特别大的字号，但是用系统默认的会发现当设置了大字号后，字体变得非常粗，严重影响美观。 网上搜索了下，决定换一个字体,下面是部分代码： 123Typeface typeface  = Typeface.createFromAsset(getAssets(),&quot;font/PingFang ExtraLight.ttf&quot;);mTextVi">
 <meta name="keywords" content="tips">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自定义TextView的字体">
 <meta property="og:url" content="http://cyclechen.github.io/2017/04/12/2017-04-12-custom-textview-font/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="最近在一个比较简洁的屏保，屏幕中间只显示当前日期和时间其中时间需要特别大的字号，但是用系统默认的会发现当设置了大字号后，字体变得非常粗，严重影响美观。 网上搜索了下，决定换一个字体,下面是部分代码： 123456Typeface typeface  = Typeface.createFromAsset(getAssets(),&quot;font/PingFang ExtraLight.ttf&quot;);mTex">
-<meta property="og:updated_time" content="2017-06-27T12:26:03.466Z">
+<meta property="og:description" content="最近在一个比较简洁的屏保，屏幕中间只显示当前日期和时间其中时间需要特别大的字号，但是用系统默认的会发现当设置了大字号后，字体变得非常粗，严重影响美观。 网上搜索了下，决定换一个字体,下面是部分代码： 123Typeface typeface  = Typeface.createFromAsset(getAssets(),&quot;font/PingFang ExtraLight.ttf&quot;);mTextVi">
+<meta property="og:updated_time" content="2017-07-03T12:20:26.761Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自定义TextView的字体">
-<meta name="twitter:description" content="最近在一个比较简洁的屏保，屏幕中间只显示当前日期和时间其中时间需要特别大的字号，但是用系统默认的会发现当设置了大字号后，字体变得非常粗，严重影响美观。 网上搜索了下，决定换一个字体,下面是部分代码： 123456Typeface typeface  = Typeface.createFromAsset(getAssets(),&quot;font/PingFang ExtraLight.ttf&quot;);mTex">
+<meta name="twitter:description" content="最近在一个比较简洁的屏保，屏幕中间只显示当前日期和时间其中时间需要特别大的字号，但是用系统默认的会发现当设置了大字号后，字体变得非常粗，严重影响美观。 网上搜索了下，决定换一个字体,下面是部分代码： 123Typeface typeface  = Typeface.createFromAsset(getAssets(),&quot;font/PingFang ExtraLight.ttf&quot;);mTextVi">
 
 
 
@@ -403,8 +403,8 @@
       
         <p>最近在一个比较简洁的屏保，屏幕中间只显示当前日期和时间<br>其中时间需要特别大的字号，但是用系统默认的会发现当设置了大字号后，字体变得非常粗，严重影响美观。</p>
 <p>网上搜索了下，决定换一个字体,下面是部分代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Typeface typeface  = Typeface.createFromAsset(getAssets(),<span class="string">"font/PingFang ExtraLight.ttf"</span>);</div><div class="line"></div><div class="line">mTextViewTime = (TextView) findViewById(R.id.tv_time);</div><div class="line">       </div><div class="line">mTextViewTime.setTypeface(typeface);</div></pre></td></tr></table></figure>
-<p>需要注意一点：字体本身都带有一定的padding值！所以布局中设置比较大字号的时候，可能会受此影响，导致文字显示不出来，或者影响布局。<br>解决办法：设置android:includeFontPadding=”false”,用来设置文本框是否包含顶部和底部留白（左右两侧默认没有留白），将其设置为false，TextView就会取消留白。这样就避免了TextView导致UI出现差异！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Typeface typeface  = Typeface.createFromAsset(getAssets(),<span class="string">"font/PingFang ExtraLight.ttf"</span>);</div><div class="line">mTextViewTime = (TextView) findViewById(R.id.tv_time);</div><div class="line">mTextViewTime.setTypeface(typeface);</div></pre></td></tr></table></figure>
+<p>需要注意一点：字体本身都带有一定的padding值！所以布局中设置比较大字号的时候，可能会受此影响，导致文字显示不出来，或者影响布局。<br>解决办法：设置<code>android:includeFontPadding=&quot;false&quot;</code> ,用来设置文本框是否包含顶部和底部留白（左右两侧默认没有留白），将其设置为false，TextView就会取消留白。这样就避免了TextView导致UI出现差异！</p>
 
       
     </div>
@@ -447,8 +447,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/11/2017-04-11-problems-in-using-jekyll/" rel="next" title="使用jekyll过程中遇到的一些问题">
-                <i class="fa fa-chevron-left"></i> 使用jekyll过程中遇到的一些问题
+              <a href="/2017/04/11/2017-04-11-missing-fragment-viewpager-content-when-return-front/" rel="next" title="切换到前台时FragmentViewPager内容缺失问题">
+                <i class="fa fa-chevron-left"></i> 切换到前台时FragmentViewPager内容缺失问题
               </a>
             
           </div>
@@ -540,7 +540,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -551,7 +551,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

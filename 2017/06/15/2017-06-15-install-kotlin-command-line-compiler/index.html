@@ -100,17 +100,17 @@
 
 
 
-<meta name="description" content="官方参考教程网址：https://kotlinlang.org/docs/tutorials/command-line.html 本文主要是纪录一下在安装过程遇到的问题及解决办法。Let’s go! 环境：win10，jdk1.8.0_91，已配置JAVA_HOME等java相关环境变量。 #安装过程 1.按照官网教程的说明，去github里下载了zip压缩包，解压到Files ````122.设">
+<meta name="description" content="官方参考教程网址：https://kotlinlang.org/docs/tutorials/command-line.html 本文主要是纪录一下在安装过程遇到的问题及解决办法。Let’s go! 环境：win10，jdk1.8.0_91，已配置JAVA_HOME等java相关环境变量。 安装过程1.按照官网教程的说明，去github里下载了zip压缩包，解压到D:\Program Files">
 <meta name="keywords" content="kotlin,kotlin命令行">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装kotlin命令行编译器">
 <meta property="og:url" content="http://cyclechen.github.io/2017/06/15/2017-06-15-install-kotlin-command-line-compiler/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="官方参考教程网址：https://kotlinlang.org/docs/tutorials/command-line.html 本文主要是纪录一下在安装过程遇到的问题及解决办法。Let’s go! 环境：win10，jdk1.8.0_91，已配置JAVA_HOME等java相关环境变量。 #安装过程 1.按照官网教程的说明，去github里下载了zip压缩包，解压到Files ````122.设">
-<meta property="og:updated_time" content="2017-06-27T12:05:38.589Z">
+<meta property="og:description" content="官方参考教程网址：https://kotlinlang.org/docs/tutorials/command-line.html 本文主要是纪录一下在安装过程遇到的问题及解决办法。Let’s go! 环境：win10，jdk1.8.0_91，已配置JAVA_HOME等java相关环境变量。 安装过程1.按照官网教程的说明，去github里下载了zip压缩包，解压到D:\Program Files">
+<meta property="og:updated_time" content="2017-07-03T12:11:14.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装kotlin命令行编译器">
-<meta name="twitter:description" content="官方参考教程网址：https://kotlinlang.org/docs/tutorials/command-line.html 本文主要是纪录一下在安装过程遇到的问题及解决办法。Let’s go! 环境：win10，jdk1.8.0_91，已配置JAVA_HOME等java相关环境变量。 #安装过程 1.按照官网教程的说明，去github里下载了zip压缩包，解压到Files ````122.设">
+<meta name="twitter:description" content="官方参考教程网址：https://kotlinlang.org/docs/tutorials/command-line.html 本文主要是纪录一下在安装过程遇到的问题及解决办法。Let’s go! 环境：win10，jdk1.8.0_91，已配置JAVA_HOME等java相关环境变量。 安装过程1.按照官网教程的说明，去github里下载了zip压缩包，解压到D:\Program Files">
 
 
 
@@ -367,7 +367,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  600 字
+                  605 字
                 </span>
               
 
@@ -404,20 +404,20 @@
         <p>官方参考教程网址：<a href="https://kotlinlang.org/docs/tutorials/command-line.html" target="_blank" rel="external">https://kotlinlang.org/docs/tutorials/command-line.html</a></p>
 <p>本文主要是纪录一下在安装过程遇到的问题及解决办法。Let’s go!</p>
 <p>环境：win10，jdk1.8.0_91，已配置JAVA_HOME等java相关环境变量。</p>
-<p>#安装过程</p>
-<p>1.按照官网教程的说明，去github里下载了zip压缩包，解压到<figure class="highlight plain"><figcaption><span>Files ````</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2.设置环境变量KOTLIN_HOME，值为```` D:\Program Files\kotlin-compiler-1.1.2-5\kotlinc</div></pre></td></tr></table></figure></p>
-<p>3.在环境变量变量Path最后增加<figure class="highlight plain"><figcaption><span>````</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">4.好了，到了第3步的时候貌似一切都没问题了。那么，验证一下是否安装正常。打开cmd，执行 ```` kotlinc -help</div></pre></td></tr></table></figure></p>
-<p>  结果：<br>  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">C:\Users\cycle&gt;kotlinc -help</div><div class="line">错误: 找不到或无法加载主类 org.jetbrains.kotlin.preloading.Preloader</div></pre></td></tr></table></figure></p>
-<p>  What？！难道是少执行了什么？又看了一次官网教程</p>
+<h1 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h1><p>1.按照官网教程的说明，去github里下载了zip压缩包，解压到<code>D:\Program Files</code></p>
+<p>2.设置环境变量KOTLIN_HOME，值为<code>D:\Program Files\kotlin-compiler-1.1.2-5\kotlinc</code></p>
+<p>3.在环境变量变量Path最后增加 <code>%KOTLIN_HOME%\bin;</code></p>
+<p>4.好了，到了第3步的时候貌似一切都没问题了。那么，验证一下是否安装正常。打开cmd，执行<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kotlinc -<span class="built_in">help</span></div></pre></td></tr></table></figure></p>
+<p>结果：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">C:\Users\cycle&gt;kotlinc -<span class="built_in">help</span></div><div class="line">错误: 找不到或无法加载主类 org.jetbrains.kotlin.preloading.Preloader</div></pre></td></tr></table></figure></p>
+<p>What？！难道是少执行了什么？又看了一次官网教程</p>
 <blockquote>
 <p>Unzip the standalone compiler into a directory and optionally add the bin directory to the system path. The bin directory contains the scripts needed to compile and run Kotlin on Windows, OS X and Linux.</p>
 </blockquote>
 <p> 大概可以理解为解压独立编辑器到一个目录中，然后，可以将bin目录增加到系统path中，这个bin里包括了一些在window,osx和linux下需要编译和执行的脚本。</p>
-<p>  漏了初始化？打开bin目录，看到有几个kotlin.bat,kotlinc.bat,kotlinc-js.bat,kotlinc-jvm.bat等几个文件。</p>
-<p>  都用notepad++打开看了下，kotlin.bat,kotlinc-js.bat,kotlinc-jvm.bat三个都是调用kotlinc.bat的。唔，试一下直接执行kotlinc.bat看看，结果，返回了同样的错误。</p>
-<p>  google了下错误信息，然后并没有得到以什么有效信息，再看了下错误信息，突然想，不会和路径有关吧。</p>
-<p>  删除目录，然后，重新压缩到<figure class="highlight plain"><figcaption><span>````下</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">将KOTLIN_HOME改为```` D:\kotlin-compiler</div></pre></td></tr></table></figure></p>
-<p>  重新打开一个cmd，重新执行<code>kotlinc -help</code></p>
+<p> 漏了初始化？打开bin目录，看到有几个kotlin.bat,kotlinc.bat,kotlinc-js.bat,kotlinc-jvm.bat等几个文件。<br>  都用notepad++打开看了下，kotlin.bat,kotlinc-js.bat,kotlinc-jvm.bat三个都是调用kotlinc.bat的。</p>
+<p>唔，试一下直接执行kotlinc.bat看看，结果，返回了同样的错误。</p>
+<p> google了下错误信息，然后并没有得到以什么有效信息，再看了下错误信息，突然想，不会和路径有关吧。<br>  删除目录，然后，重新压缩到<code>D:\</code> 下<br>  将KOTLIN_HOME改为<br>  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">D:\kotlin-compiler</div></pre></td></tr></table></figure></p>
+<p>  重新打开一个cmd，重新执行<br>  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kotlinc -<span class="built_in">help</span></div></pre></td></tr></table></figure></p>
 <p>  结果，返回正常了！</p>
 <p>  对比了一下前后的目录，只能发现只是一个空格的问题，难道就是空格了吗？为了验证这个假设，再一次重新解压到另外一个带空格和不带空格的目录路径下，</p>
 <p>  结果，不带空格下的正常！而不带空格的，仍报同样的错误！</p>
@@ -532,8 +532,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -559,7 +568,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -570,7 +579,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -595,6 +604,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装过程"><span class="nav-number">1.</span> <span class="nav-text">安装过程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
