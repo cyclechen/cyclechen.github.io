@@ -97,7 +97,7 @@
 <meta name="keywords" content="viewpager,FragmentViewPager">
 <meta property="og:type" content="article">
 <meta property="og:title" content="切换到前台时FragmentViewPager内容缺失问题">
-<meta property="og:url" content="http://cyclechen.github.io/2017/04/11/2017-04-11-missing-fragment-viewpager-content-when-return-front/index.html">
+<meta property="og:url" content="http://cyclechen.github.io/2017/04/11/2017-04-11-missing-fragment-viewpager/index.html">
 <meta property="og:site_name" content="CycleChen&#39;s blog.">
 <meta property="og:description" content="继续整理笔记。。。。。 #切换到前台时FragmentViewPager内容缺失问题 1recomandAdapter = new RecomandFragmentPagerAdapter(getActivity().getSupportFragmentManager(), fragmentList); 改成 1recomandAdapter = new RecomandFragmentPager">
 <meta property="og:updated_time" content="2017-06-27T12:25:28.753Z">
@@ -131,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="http://cyclechen.github.io/2017/04/11/2017-04-11-missing-fragment-viewpager-content-when-return-front/"/>
+  <link rel="canonical" href="http://cyclechen.github.io/2017/04/11/2017-04-11-missing-fragment-viewpager/"/>
 
 
 
@@ -266,7 +266,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://cyclechen.github.io/2017/04/11/2017-04-11-missing-fragment-viewpager-content-when-return-front/">
+    <link itemprop="mainEntityOfPage" href="http://cyclechen.github.io/2017/04/11/2017-04-11-missing-fragment-viewpager/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CycleChen">
@@ -713,6 +713,8 @@
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
    <script type="text/javascript">
 		var gitalk = new Gitalk({
 		  clientID: 'f9b99e5d1eb95ae69e97',
@@ -720,7 +722,7 @@
 		  repo: 'blog-comment',
 		  owner: 'CycleChen',
 		  admin: ['CycleChen'],
-		  id: location.pathname,
+		  id: md5(window.location.pathname),
 		  distractionFreeMode: 'true'
 		})
 		gitalk.render('gitalk-container')           
