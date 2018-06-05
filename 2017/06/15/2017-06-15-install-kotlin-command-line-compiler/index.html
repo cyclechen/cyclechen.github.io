@@ -98,9 +98,9 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装kotlin命令行编译器">
 <meta property="og:url" content="http://cyclechen.github.io/2017/06/15/2017-06-15-install-kotlin-command-line-compiler/index.html">
-<meta property="og:site_name" content="Welcome">
+<meta property="og:site_name" content="CycleChen&#39;s blog.">
 <meta property="og:description" content="官方参考教程网址：https://kotlinlang.org/docs/tutorials/command-line.html 本文主要是纪录一下在安装过程遇到的问题及解决办法。Let’s go! 环境：win10，jdk1.8.0_91，已配置JAVA_HOME等java相关环境变量。 安装过程1.按照官网教程的说明，去github里下载了zip压缩包，解压到D:\Program Files">
-<meta property="og:updated_time" content="2017-07-03T12:11:14.378Z">
+<meta property="og:updated_time" content="2017-07-03T12:11:14.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装kotlin命令行编译器">
 <meta name="twitter:description" content="官方参考教程网址：https://kotlinlang.org/docs/tutorials/command-line.html 本文主要是纪录一下在安装过程遇到的问题及解决办法。Let’s go! 环境：win10，jdk1.8.0_91，已配置JAVA_HOME等java相关环境变量。 安装过程1.按照官网教程的说明，去github里下载了zip压缩包，解压到D:\Program Files">
@@ -137,7 +137,7 @@
 
 
 
-  <title>安装kotlin命令行编译器 | Welcome</title>
+  <title>安装kotlin命令行编译器 | CycleChen's blog.</title>
   
 
 
@@ -173,12 +173,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Welcome</span>
+        <span class="site-title">CycleChen's blog.</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <h1 class="site-subtitle" itemprop="description">超划算梯子：http://t.cn/R9yS0mM</h1>
+        <h1 class="site-subtitle" itemprop="description">less bb ,show me the code.</h1>
       
   </div>
 
@@ -275,7 +275,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome">
+      <meta itemprop="name" content="CycleChen's blog.">
     </span>
 
     
@@ -330,17 +330,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/06/15/2017-06-15-install-kotlin-command-line-compiler/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/15/2017-06-15-install-kotlin-command-line-compiler/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -485,12 +474,7 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+		<div id="gitalk-container"></div>
     
   </div>
 
@@ -618,7 +602,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -738,26 +722,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://cyclechen.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://cyclechen.github.io/2017/06/15/2017-06-15-install-kotlin-command-line-compiler/';
-          this.page.identifier = '2017/06/15/2017-06-15-install-kotlin-command-line-compiler/';
-          this.page.title = '安装kotlin命令行编译器';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://cyclechen.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -779,8 +743,28 @@
 
 
 
+  
 
 
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: 'f9b99e5d1eb95ae69e97',
+		  clientSecret: '42b73cafdea55c636672eadad7a1f12c0af04b29',
+		  repo: 'blog-comment',
+		  owner: 'CycleChen',
+		  admin: ['CycleChen'],
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
   
 

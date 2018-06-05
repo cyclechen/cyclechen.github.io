@@ -97,9 +97,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="tags">
 <meta property="og:url" content="http://cyclechen.github.io/tags/index.html">
-<meta property="og:site_name" content="Welcome">
+<meta property="og:site_name" content="CycleChen&#39;s blog.">
 <meta property="og:description" content="Life is all of tortrues.">
-<meta property="og:updated_time" content="2017-06-27T06:24:09.264Z">
+<meta property="og:updated_time" content="2017-06-27T06:24:09.265Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tags">
 <meta name="twitter:description" content="Life is all of tortrues.">
@@ -136,7 +136,7 @@
 
 
 
-  <title>tags | Welcome</title>
+  <title>tags | CycleChen's blog.</title>
   
 
 
@@ -172,12 +172,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Welcome</span>
+        <span class="site-title">CycleChen's blog.</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <h1 class="site-subtitle" itemprop="description">超划算梯子：http://t.cn/R9yS0mM</h1>
+        <h1 class="site-subtitle" itemprop="description">less bb ,show me the code.</h1>
       
   </div>
 
@@ -285,12 +285,7 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+		<div id="gitalk-container"></div>
     
   </div>
 
@@ -393,7 +388,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -513,26 +508,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://cyclechen.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://cyclechen.github.io/tags/index.html';
-          this.page.identifier = 'tags/index.html';
-          this.page.title = 'tags';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://cyclechen.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -554,8 +529,28 @@
 
 
 
+  
 
 
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: 'f9b99e5d1eb95ae69e97',
+		  clientSecret: '42b73cafdea55c636672eadad7a1f12c0af04b29',
+		  repo: 'blog-comment',
+		  owner: 'CycleChen',
+		  admin: ['CycleChen'],
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
   
 

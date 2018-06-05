@@ -98,7 +98,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos7中安装andrdoid编译环境">
 <meta property="og:url" content="http://cyclechen.github.io/2017/06/26/2017-06-26-install-android-build-enviroment-in-centos7/index.html">
-<meta property="og:site_name" content="Welcome">
+<meta property="og:site_name" content="CycleChen&#39;s blog.">
 <meta property="og:description" content="继续纪录~~~~本文描述了大centos7.0中如何部署andrdoid编译环境，附件下载连接：http://pan.baidu.com/s/1nv6wV3N 密码：m0lm附件包括：  android-sdk-linux.tar： androidSDK压缩包，包括了extra，platform（21，22），build tools(21.0.0，21.1.1，22.0.0，22.0.1)。其他版">
 <meta property="og:updated_time" content="2017-07-04T10:37:46.350Z">
 <meta name="twitter:card" content="summary">
@@ -137,7 +137,7 @@
 
 
 
-  <title>centos7中安装andrdoid编译环境 | Welcome</title>
+  <title>centos7中安装andrdoid编译环境 | CycleChen's blog.</title>
   
 
 
@@ -173,12 +173,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Welcome</span>
+        <span class="site-title">CycleChen's blog.</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <h1 class="site-subtitle" itemprop="description">超划算梯子：http://t.cn/R9yS0mM</h1>
+        <h1 class="site-subtitle" itemprop="description">less bb ,show me the code.</h1>
       
   </div>
 
@@ -275,7 +275,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome">
+      <meta itemprop="name" content="CycleChen's blog.">
     </span>
 
     
@@ -330,17 +330,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/06/26/2017-06-26-install-android-build-enviroment-in-centos7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/26/2017-06-26-install-android-build-enviroment-in-centos7/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -511,12 +500,7 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+		<div id="gitalk-container"></div>
     
   </div>
 
@@ -644,7 +628,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -764,26 +748,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://cyclechen.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://cyclechen.github.io/2017/06/26/2017-06-26-install-android-build-enviroment-in-centos7/';
-          this.page.identifier = '2017/06/26/2017-06-26-install-android-build-enviroment-in-centos7/';
-          this.page.title = 'centos7中安装andrdoid编译环境';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://cyclechen.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -805,8 +769,28 @@
 
 
 
+  
 
 
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: 'f9b99e5d1eb95ae69e97',
+		  clientSecret: '42b73cafdea55c636672eadad7a1f12c0af04b29',
+		  repo: 'blog-comment',
+		  owner: 'CycleChen',
+		  admin: ['CycleChen'],
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
   
 
