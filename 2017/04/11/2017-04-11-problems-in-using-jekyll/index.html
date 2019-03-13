@@ -501,8 +501,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/11/2017-04-11-missing-fragment-viewpager/" rel="next" title="切换到前台时FragmentViewPager内容缺失问题">
-                <i class="fa fa-chevron-left"></i> 切换到前台时FragmentViewPager内容缺失问题
+              <a href="/2016/08/16/2015-07-07-change-ubuntu-resolution/" rel="next" title="vmware中修改ubuntu的分辨率">
+                <i class="fa fa-chevron-left"></i> vmware中修改ubuntu的分辨率
               </a>
             
           </div>
@@ -511,8 +511,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/12/2017-04-12-custom-textview-font/" rel="prev" title="自定义TextView的字体">
-                自定义TextView的字体 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/11/2017-04-11-missing-fragment-viewpager/" rel="prev" title="切换到前台时FragmentViewPager内容缺失问题">
+                切换到前台时FragmentViewPager内容缺失问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -534,6 +534,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
 
   
 
@@ -869,6 +873,35 @@
 
   
 
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '2067017121f9f2937633',
+    clientSecret: '5926f1a03c51a4c8c69b9665e0965471f25124ba',
+    repo: 'blog-comment',
+    owner: 'cyclechen',
+    admin: ['cyclechen'],
+    id: md5(location.pathname),
+    
+      language: 'zh-CN',
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
 
   
 
