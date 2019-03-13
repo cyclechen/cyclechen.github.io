@@ -77,6 +77,20 @@
 
 
 
+<<<<<<< HEAD
+=======
+<meta name="description" content="为了避免文件过大影响tomcat性能，同时方便查看日志，故分割该日志文件是很有必要的。 方法有很多，可以上网搜索一下，下面亲测可行的方法； 环境：centos5.9-64, tomcat7.0 打开tomcat/bin/catalina.sh，找到1CATALINA_OUT=&quot;$CATALINA_BASE&quot;/logs/catalina.out 修改为：1CATALINA_OUT=&quot;$CATALIN">
+<meta name="keywords" content="java,tomcat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分割catalina.log日志文件">
+<meta property="og:url" content="http://cyclechen.github.io/2015/07/03/2015-07-03-split-catalina-log/index.html">
+<meta property="og:site_name" content="CycleChen&#39;s blog.">
+<meta property="og:description" content="为了避免文件过大影响tomcat性能，同时方便查看日志，故分割该日志文件是很有必要的。 方法有很多，可以上网搜索一下，下面亲测可行的方法； 环境：centos5.9-64, tomcat7.0 打开tomcat/bin/catalina.sh，找到1CATALINA_OUT=&quot;$CATALINA_BASE&quot;/logs/catalina.out 修改为：1CATALINA_OUT=&quot;$CATALIN">
+<meta property="og:updated_time" content="2017-06-27T12:24:23.044Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="分割catalina.log日志文件">
+<meta name="twitter:description" content="为了避免文件过大影响tomcat性能，同时方便查看日志，故分割该日志文件是很有必要的。 方法有很多，可以上网搜索一下，下面亲测可行的方法； 环境：centos5.9-64, tomcat7.0 打开tomcat/bin/catalina.sh，找到1CATALINA_OUT=&quot;$CATALINA_BASE&quot;/logs/catalina.out 修改为：1CATALINA_OUT=&quot;$CATALIN">
+>>>>>>> d615f5422ed42c8ffc7cfabf8dbc3e07e9298136
 
 
 
@@ -125,6 +139,11 @@
 
 
 
+<<<<<<< HEAD
+=======
+  <title>分割catalina.log日志文件 | CycleChen's blog.</title>
+  
+>>>>>>> d615f5422ed42c8ffc7cfabf8dbc3e07e9298136
 
   <link rel="canonical" href="http://cyclechen.me/2015/07/03/2015-07-03-split-catalina-log/"/>
 
@@ -563,6 +582,15 @@
 	<div id="gitalk-container"></div>
   
 
+<<<<<<< HEAD
+=======
+          
+  <div class="comments" id="comments">
+    
+		<div id="gitalk-container"></div>
+    
+  </div>
+>>>>>>> d615f5422ed42c8ffc7cfabf8dbc3e07e9298136
 
 
         </div>
@@ -598,6 +626,7 @@
           </div>
 
           
+<<<<<<< HEAD
             <nav class="site-state motion-element">
               
                 <div class="site-state-item site-state-posts">
@@ -683,6 +712,36 @@
           
 
           
+=======
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+>>>>>>> d615f5422ed42c8ffc7cfabf8dbc3e07e9298136
           
 
           
@@ -710,9 +769,18 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
+<<<<<<< HEAD
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
+=======
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+>>>>>>> d615f5422ed42c8ffc7cfabf8dbc3e07e9298136
   </span>
   <span class="author" itemprop="copyrightHolder">CycleChen</span>
 
@@ -944,15 +1012,23 @@ $(function() {
   
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d615f5422ed42c8ffc7cfabf8dbc3e07e9298136
+
+
+	
+
+
+
+
+<<<<<<< HEAD
+=======
 
   
-
-
-
-
-
+>>>>>>> d615f5422ed42c8ffc7cfabf8dbc3e07e9298136
 
 
 
@@ -1282,7 +1358,23 @@ $(function() {
 
 
 
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: 'f9b99e5d1eb95ae69e97',
+		  clientSecret: '42b73cafdea55c636672eadad7a1f12c0af04b29',
+		  repo: 'blog-comment',
+		  owner: 'CycleChen',
+		  admin: ['CycleChen'],
+		  id: md5(window.location.pathname),
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
   
 
