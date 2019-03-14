@@ -187,7 +187,7 @@
     </div>
     
       
-        <p class="site-subtitle">如果只用一种方式了解某样事物，你就不会真正了解它。</p>
+        <h1 class="site-subtitle" itemprop="description">如果只用一种方式了解某样事物，你就不会真正了解它。</h1>
       
     
     
@@ -352,6 +352,174 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cyclechen.me/2016/08/16/2016-08-16-get-image-from-drawable-directory/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CycleChen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CycleChen's blog.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2016/08/16/2016-08-16-get-image-from-drawable-directory/" class="post-title-link" itemprop="url">如何通过文件名从drawable文件夹中获取图片文件。</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-08-16 20:03:20" itemprop="dateCreated datePublished" datetime="2016-08-16T20:03:20+08:00">2016-08-16</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+            <span id="/2016/08/16/2016-08-16-get-image-from-drawable-directory/" class="leancloud_visitors" data-flag-title="如何通过文件名从drawable文件夹中获取图片文件。">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>从assets文件夹中加载图片，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * </span></span><br><span class="line"><span class="comment">   *</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> imageName 图片名称，不带后缀的，例如：test</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> imageView</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">loadLocalImage</span><span class="params">(String imageName, ImageView imageView, Context context)</span> </span>&#123;</span><br><span class="line">      <span class="comment">//得到application对象</span></span><br><span class="line">      ApplicationInfo appInfo = context.getApplicationInfo();</span><br><span class="line"><span class="comment">//得到该图片的id(name 是该图片的名字，"drawable"是该图片存放的目录，appInfo.packageName是包名)</span></span><br><span class="line">      <span class="keyword">int</span> resID = context.getResources().getIdentifier(imageName, <span class="string">"drawable"</span>, appInfo.packageName);</span><br><span class="line">      imageView.setBackgroundResource((resID));</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://cyclechen.me/2016/08/16/2015-07-07-change-ubuntu-resolution/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -369,13 +537,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2016/08/16/2015-07-07-change-ubuntu-resolution/" class="post-title-link" itemprop="url">vmware中修改ubuntu的分辨率</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -429,6 +597,17 @@
           
 
           
+          
+            <span id="/2016/08/16/2015-07-07-change-ubuntu-resolution/" class="leancloud_visitors" data-flag-title="vmware中修改ubuntu的分辨率">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -531,163 +710,6 @@ sudo update-grub</code></pre>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cyclechen.me/2016/08/16/2016-08-16-get-image-from-drawable-directory/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="CycleChen">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CycleChen's blog.">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2016/08/16/2016-08-16-get-image-from-drawable-directory/" class="post-title-link" itemprop="url">如何通过文件名从drawable文件夹中获取图片文件。</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2016-08-16 20:03:20" itemprop="dateCreated datePublished" datetime="2016-08-16T20:03:20+08:00">2016-08-16</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>从assets文件夹中加载图片，代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * </span></span><br><span class="line"><span class="comment">   *</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> imageName 图片名称，不带后缀的，例如：test</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> imageView</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">loadLocalImage</span><span class="params">(String imageName, ImageView imageView, Context context)</span> </span>&#123;</span><br><span class="line">      <span class="comment">//得到application对象</span></span><br><span class="line">      ApplicationInfo appInfo = context.getApplicationInfo();</span><br><span class="line"><span class="comment">//得到该图片的id(name 是该图片的名字，"drawable"是该图片存放的目录，appInfo.packageName是包名)</span></span><br><span class="line">      <span class="keyword">int</span> resID = context.getResources().getIdentifier(imageName, <span class="string">"drawable"</span>, appInfo.packageName);</span><br><span class="line">      imageView.setBackgroundResource((resID));</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://cyclechen.me/2015/07/03/2015-07-03-split-catalina-log/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -705,13 +727,13 @@ sudo update-grub</code></pre>
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2015/07/03/2015-07-03-split-catalina-log/" class="post-title-link" itemprop="url">分割catalina.log日志文件</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -765,6 +787,17 @@ sudo update-grub</code></pre>
           
 
           
+          
+            <span id="/2015/07/03/2015-07-03-split-catalina-log/" class="leancloud_visitors" data-flag-title="分割catalina.log日志文件">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -980,7 +1013,7 @@ sudo update-grub</code></pre>
                   
                     
                   
-                  <a href="https://github.com/cyclechen" title="GitHub &rarr; https://github.com/cyclechen" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2N5Y2xlY2hlbg==" title="GitHub &rarr; https://github.com/cyclechen"><i class="fa fa-fw fa-github"></i>GitHub</span>
                 </span>
               
             </div>
@@ -1033,7 +1066,7 @@ sudo update-grub</code></pre>
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v3.8.0</div>
 
 
 
@@ -1041,7 +1074,7 @@ sudo update-grub</code></pre>
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> v7.0.1</div>
 
 
 
@@ -1142,19 +1175,89 @@ sudo update-grub</code></pre>
   
 
   
-
-  
-
-  
-
+  <script src="/js/src/exturl.js?v=7.0.1"></script>
 
 
   
 
+  
 
 
 
   
+
+
+
+
+  
+  
+  <script>
+    
+    function showTime(Counter) {
+      var entries = [];
+      var $visitors = $('.leancloud_visitors');
+
+      $visitors.each(function() {
+        entries.push( $(this).attr('id').trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+        .done(function({ results }) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + '')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': '',
+                'X-LC-Key': '',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            if ($('.post-title-link').length >= 1) {
+              showTime(Counter);
+            }
+          
+        });
+    });
+  </script>
+
+
 
   
 

@@ -186,7 +186,7 @@
     </div>
     
       
-        <p class="site-subtitle">如果只用一种方式了解某样事物，你就不会真正了解它。</p>
+        <h1 class="site-subtitle" itemprop="description">如果只用一种方式了解某样事物，你就不会真正了解它。</h1>
       
     
     
@@ -364,8 +364,8 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>无法debug<small>标签</small>
-        </h1>
+        <h2>无法debug<small>标签</small>
+        </h2>
       </div>
 
       
@@ -374,7 +374,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h2 class="post-title">
+      <h3 class="post-title">
         
           <a class="post-title-link" href="/2017/07/28/2017-07-28-solution-about-unable-to-debug/" itemprop="url">
             
@@ -382,7 +382,7 @@
             
           </a>
         
-      </h2>
+      </h3>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated" datetime="2017-07-28T20:03:20+08:00" content="2017-07-28">
@@ -542,7 +542,7 @@
                   
                     
                   
-                  <a href="https://github.com/cyclechen" title="GitHub &rarr; https://github.com/cyclechen" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2N5Y2xlY2hlbg==" title="GitHub &rarr; https://github.com/cyclechen"><i class="fa fa-fw fa-github"></i>GitHub</span>
                 </span>
               
             </div>
@@ -595,7 +595,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v3.8.0</div>
 
 
 
@@ -603,7 +603,7 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> v7.0.1</div>
 
 
 
@@ -704,19 +704,89 @@
   
 
   
-
-  
-
-  
-
+  <script src="/js/src/exturl.js?v=7.0.1"></script>
 
 
   
 
+  
 
 
 
   
+
+
+
+
+  
+  
+  <script>
+    
+    function showTime(Counter) {
+      var entries = [];
+      var $visitors = $('.leancloud_visitors');
+
+      $visitors.each(function() {
+        entries.push( $(this).attr('id').trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+        .done(function({ results }) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + '')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': '',
+                'X-LC-Key': '',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            if ($('.post-title-link').length >= 1) {
+              showTime(Counter);
+            }
+          
+        });
+    });
+  </script>
+
+
 
   
 

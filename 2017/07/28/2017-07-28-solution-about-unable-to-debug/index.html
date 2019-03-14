@@ -191,7 +191,7 @@
     </div>
     
       
-        <p class="site-subtitle">如果只用一种方式了解某样事物，你就不会真正了解它。</p>
+        <h1 class="site-subtitle" itemprop="description">如果只用一种方式了解某样事物，你就不会真正了解它。</h1>
       
     
     
@@ -373,11 +373,11 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">android studio无法debug的几个解决思路
+          <h2 class="post-title" itemprop="name headline">android studio无法debug的几个解决思路
 
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -432,6 +432,17 @@
 
           
           
+            <span id="/2017/07/28/2017-07-28-solution-about-unable-to-debug/" class="leancloud_visitors" data-flag-title="android studio无法debug的几个解决思路">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
 
           
 
@@ -460,7 +471,7 @@
 <p>minifyEnabled，即是否启动压缩，压缩范围包括项目所有代码以及资源文件。<br>此字段设置为true，即启用压缩，此时 ProGuard 将会检测项目中未被使用的属性，方法，类以及指令，并且使用短名称替换指定的文件名，方法名和字段名。<br>这样做可以减少apk体积，变相解决64k方法限制问题，并且也使用apk不容易被逆向破解。</p>
 </blockquote>
 <p>所以问题来了，实际上方法名已经被改了，这样一来，debugger也就找不到原来的方法，断点自然也就失效了。</p>
-<h3 id="2、android-process-”-remote”"><a href="#2、android-process-”-remote”" class="headerlink" title="2、android:process=”:remote”"></a>2、android:process=”:remote”</h3><p>具体见：<a href="http://blog.csdn.net/wsgqp/article/details/51946760" target="_blank" rel="noopener">http://blog.csdn.net/wsgqp/article/details/51946760</a></p>
+<h3 id="2、android-process-”-remote”"><a href="#2、android-process-”-remote”" class="headerlink" title="2、android:process=”:remote”"></a>2、android:process=”:remote”</h3><p>具体见：<span class="exturl" data-url="aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd3NncXAvYXJ0aWNsZS9kZXRhaWxzLzUxOTQ2NzYw" title="http://blog.csdn.net/wsgqp/article/details/51946760">http://blog.csdn.net/wsgqp/article/details/51946760<i class="fa fa-external-link"></i></span></p>
 <h3 id="3、方法并未被执行"><a href="#3、方法并未被执行" class="headerlink" title="3、方法并未被执行"></a>3、方法并未被执行</h3><p>InterfaceA中有个doSth()，ClassB，ClassC，ClassD分别实现InterfaceA，ClassB中的doSth()设置了断点，但是一直触发不了，此时不防检查一下，引用doSth()的对象，实际上是ClassB呢，还是ClassC或ClassD..</p>
 <p>目前遇到过的情况总结如上。以后有遇到再继续补充。</p>
 
@@ -689,7 +700,7 @@
                   
                     
                   
-                  <a href="https://github.com/cyclechen" title="GitHub &rarr; https://github.com/cyclechen" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2N5Y2xlY2hlbg==" title="GitHub &rarr; https://github.com/cyclechen"><i class="fa fa-fw fa-github"></i>GitHub</span>
                 </span>
               
             </div>
@@ -759,7 +770,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v3.8.0</div>
 
 
 
@@ -767,7 +778,7 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> v7.0.1</div>
 
 
 
@@ -872,6 +883,8 @@
   
 
   
+  <script src="/js/src/exturl.js?v=7.0.1"></script>
+
 
   
 
@@ -916,6 +929,66 @@
 
 
   
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + '')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': '',
+                'X-LC-Key': '',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
 
   
 
