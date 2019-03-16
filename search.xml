@@ -264,6 +264,31 @@
     
     
     <entry>
+      <title>vmware中修改ubuntu的分辨率</title>
+      <link href="/2016/08/16/2015-07-07-change-ubuntu-resolution/"/>
+      <url>/2016/08/16/2015-07-07-change-ubuntu-resolution/</url>
+      
+        <content type="html"><![CDATA[<p>vmware11.1.0中新安装好的ubuntu15.04,分辨率只有800*600,怎么看都不舒服,改之，具体如下：</p><pre><code>#终端中执行sudo gedit /etc/default/grub</code></pre><p>找到</p><pre><code>#GRUB_GFXMODE=640x480</code></pre><p>去掉注释,并改成自己想要的分辨率,小于主机的分辨率:</p><pre><code>GRUB_GFXMODE=1280x768</code></pre><p>保存,关闭,继续在终端中分别执行下面命令更新;</p><pre><code>echo FRAMEBUFFER=y | sudo tee /etc/initramfs-tools/conf.d/splashsudo update-initramfs -u -k all sudo update-grub</code></pre><p>重启一下虚拟机,就可以看到分辨率已经变了;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tips </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tips </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何通过文件名从drawable文件夹中获取图片文件。</title>
       <link href="/2016/08/16/2016-08-16-get-image-from-drawable-directory/"/>
       <url>/2016/08/16/2016-08-16-get-image-from-drawable-directory/</url>
@@ -283,31 +308,6 @@
             <tag> android </tag>
             
             <tag> drawable </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>vmware中修改ubuntu的分辨率</title>
-      <link href="/2016/08/16/2015-07-07-change-ubuntu-resolution/"/>
-      <url>/2016/08/16/2015-07-07-change-ubuntu-resolution/</url>
-      
-        <content type="html"><![CDATA[<p>vmware11.1.0中新安装好的ubuntu15.04,分辨率只有800*600,怎么看都不舒服,改之，具体如下：</p><pre><code>#终端中执行sudo gedit /etc/default/grub</code></pre><p>找到</p><pre><code>#GRUB_GFXMODE=640x480</code></pre><p>去掉注释,并改成自己想要的分辨率,小于主机的分辨率:</p><pre><code>GRUB_GFXMODE=1280x768</code></pre><p>保存,关闭,继续在终端中分别执行下面命令更新;</p><pre><code>echo FRAMEBUFFER=y | sudo tee /etc/initramfs-tools/conf.d/splashsudo update-initramfs -u -k all sudo update-grub</code></pre><p>重启一下虚拟机,就可以看到分辨率已经变了;</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> tips </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> tips </tag>
             
         </tags>
       
