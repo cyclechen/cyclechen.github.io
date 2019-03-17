@@ -515,43 +515,6 @@
           
           <div class="social_share">
             
-              <div>
-                
-
-<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
-
-
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css">
-
-
-  
-
-
-<div class="likely">
-	
- 	 	<div class="twitter">Tweet</div>
-	
- 	 	<div class="facebook">Share</div>
-	
- 	 	<div class="linkedin">Link</div>
-	
- 	 	<div class="gplus">Plus</div>
-	
- 	 	<div class="vkontakte">Share</div>
-	
- 	 	<div class="odnoklassniki">Class</div>
-	
- 	 	<div class="telegram">Send</div>
-	
- 	 	<div class="whatsapp">Send</div>
-	
- 	 	<div class="pinterest">Pin</div>
-	
-</div>
-
-              </div>
-            
             
               <div id="needsharebutton-postbottom">
                 <span class="btn">
@@ -881,6 +844,12 @@
     
 
     
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
 
     
 
@@ -1052,6 +1021,18 @@
       
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "horizontal";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
     
   </script>
 
